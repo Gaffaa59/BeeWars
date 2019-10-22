@@ -12,7 +12,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     chat = new Chat(ui->textBrowser,ui->send_mes,25);
     chat->createSmileButtons(ui->panel_smile);
-
+    
+    qDebug()<<"Дороу";
     connect(ui->toolButton,SIGNAL(clicked()),this,SLOT(hide_win()));
     connect(ui->toolButton_3,SIGNAL(clicked()),this,SLOT(add_server()));
     connect(ui->toolButton_4,SIGNAL(clicked()),this,SLOT(add_client()));
